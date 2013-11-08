@@ -37,7 +37,7 @@ Vagrant.configure("2") do |config|
 
 # stuff to make run with gui for now
 config.vm.provider "virtualbox" do |v|
-  v.gui = true
+#  v.gui = true
 end
 config.vm.boot_timeout = 120
 
