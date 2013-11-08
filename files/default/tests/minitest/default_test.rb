@@ -2,10 +2,11 @@ require File.expand_path('../support/helpers', __FILE__)
 
 describe 'xm-demo-cookbook::default' do
 
-  include Helpers::Xm_demo-cookbook
+  include Helpers::Xm_demo_cookbook
 
-  # Example spec tests can be found at http://git.io/Fahwsw
-  it 'runs no tests by default' do
+  
+  it "doesn't do anything yet" do
+    #put a test in here
   end
 
 end
