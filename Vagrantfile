@@ -14,8 +14,8 @@ Vagrant.configure("2") do |config|
 
   # The url from where the 'config.vm.box' box will be fetched if it
   # doesn't already exist on the user's system.
-  config.vm.box_url = "https://dl.dropboxusercontent.com/u/2105139/vagrant/win2k8r2.box"
-
+  #config.vm.box_url = "https://dl.dropboxusercontent.com/u/2105139/vagrant/win2k8r2.box"
+  config.vm.box_url = "/Users/mstratton/src/windows2008R2/win2k8r2.box"
   # Assign this VM to a host-only network IP, allowing you to access it
   # via the IP. Host-only networks can talk to the host machine as well as
   # any other machines on the same network, but cannot be accessed (through this
@@ -34,8 +34,15 @@ Vagrant.configure("2") do |config|
   # Admin user name and password
   config.winrm.username = "vagrant"
   config.winrm.password = "vagrant"
+  
+# stuff for vmware
+# don't forget to set the provider first up vagrant up --provider vmware_fusion
+config.vm.provider :vmware_fusion do |v| 
+  v.vmx["memsize"] = "2048" 
+  v.gui = true
+end  
 
-# stuff to make run with gui for now
+# vbox specifics
 config.vm.provider "virtualbox" do |v|
 #  v.gui = true
 end
@@ -53,7 +60,7 @@ config.vm.boot_timeout = 120
 
     chef.run_list = [
       "recipe[minitest-handler::default]",
-      "recipe[xm-demo-cookbook::default]"
+      "recipe[xm-demo-cookbook::webserver]"
       
     ]
   end

@@ -6,3 +6,10 @@
 # 
 # All rights reserved - Do Not Redistribute
 #
+
+
+# install the IIS-WebServerRole
+
+windows_feature 'IIS-WebServerRole' do
+  action :install
+end
