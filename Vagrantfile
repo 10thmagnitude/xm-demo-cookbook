@@ -44,7 +44,7 @@ end
 
 # vbox specifics
 config.vm.provider "virtualbox" do |v|
-#  v.gui = true
+  v.gui = true
 end
 config.vm.boot_timeout = 120
 
@@ -59,7 +59,8 @@ config.vm.boot_timeout = 120
     }
 
     chef.run_list = [
-      "recipe[minitest-handler::default]",
+      "minitest-handler",
+      "recipe[xm-demo-cookbook::baseos]",
       "recipe[xm-demo-cookbook::webserver]"
       
     ]
