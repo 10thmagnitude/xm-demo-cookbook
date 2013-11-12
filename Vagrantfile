@@ -59,7 +59,7 @@ config.vm.boot_timeout = 120
     }
 
     chef.run_list = [
-      #"minitest-handler",
+      "minitest-handler",
       "recipe[xm-demo-cookbook::baseos]",
       "recipe[xm-demo-cookbook::msmq]",
       "recipe[xm-demo-cookbook::webserver]"
