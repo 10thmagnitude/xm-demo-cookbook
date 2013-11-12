@@ -35,6 +35,7 @@ This cookbook is used in the POC for configuring a sample application server for
 ## TODO List
 ``` 
 * Get things working properly using chefspec
+```
 
 ## Requirements
 
