@@ -3,6 +3,8 @@
 
 # xm-demo-cookbook cookbook
 
+## Features
+```
 This cookbook is used in the POC for configuring a sample application server for a .NET web application. The features of this cookbook are as follows:
 
 * Install Windows Roles and Features:
@@ -28,30 +30,35 @@ This cookbook is used in the POC for configuring a sample application server for
 	* Enable Windows authentication on the IIS site
 
 * Create sample MSMQ queue
+```
 
-# Requirements
+## TODO List
+``` 
+* Get things working properly using chefspec
+
+## Requirements
 
 Makes heavy use of Berkshelf. Which is a good thing. You should definitely be using Berkshelf.
 
-# Usage
+## Usage
 
-# Attributes
-## administrator
-## admin_password
-## apppool_user
-## apppool_password
-## web_root
+## Attributes
+### administrator
+### admin_password
+### apppool_user
+### apppool_password
+### web_root
 
-# Recipes
-## baseos
+## Recipes
+### baseos
 This is the base operating system.
 
-## msmq
+### msmq
 Installs and configurations MSMQ
 
-## webserver
+### webserver
 All IIS related items including setup of app pools, etc
 
-# Author
+## Author
 
 Author:: Matt Stratton (<mstratton@10thmagnitude.com>)
