@@ -8,3 +8,4 @@ version          '0.1.0'
 
 depends "windows", "~> 1.11.0"
 depends "iis", "~> 1.5.4"
+depends "minitest-handler", "~> 1.1.2"

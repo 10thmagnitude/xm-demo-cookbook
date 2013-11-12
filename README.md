@@ -1,3 +1,6 @@
+[![Build Status](https://secure.travis-ci.org/mattstratton/xm-demo-cookbook.png)](http://travis-ci.org/mattstratton/xm-demo-cookbook)
+
+
 # xm-demo-cookbook cookbook
 
 This cookbook is used in the POC for configuring a sample application server for Grosvenor. The features of this cookbook are as follows:
