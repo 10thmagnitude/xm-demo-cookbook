@@ -10,15 +10,3 @@ describe 'xm-demo-cookbook::default' do
   end
 
 end
-
-describe "IIS" do
-  it "should have the web server service running" do
-    service("W3SVC").must_be_running
-  end
-end
-
-describe "Base OS" do
-  it "should have the SNMP server service running" do
-    service("SNMP").must_be_running
-  end
-end

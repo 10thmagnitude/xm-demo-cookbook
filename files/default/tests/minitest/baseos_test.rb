@@ -1,11 +1,10 @@
 require File.expand_path('../support/helpers', __FILE__)
 
-describe 'xm-demo-cookbook::baseos' do
+include Helpers::Xm_demo_cookbook
 
-  include Helpers::Xm_demo_cookbook
-
-  # Example spec tests can be found at http://git.io/Fahwsw
-  it 'runs no tests by default' do
+class GroupTest < MiniTest::Unit::TestCase
+  
+  def guest_group_exists
+    assert Group.exist?('Guests')
   end
-
 end
