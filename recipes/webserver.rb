@@ -11,8 +11,10 @@
 # install the IIS-WebServerRole
 
 %w[IIS-WebServerRole NetFx3 IIS-ISAPIFilter IIS-ISAPIExtensionsIIS-NetFxExtensibility IIS-ASPNET].each do |feature|
+  windows_feature feature do
     action :install
     notifies :request, 'windows_reboot[15]'
+  end
 end
 
 # Reboot handler. Lets us reboot when we need to.
