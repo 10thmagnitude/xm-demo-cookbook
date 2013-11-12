@@ -1,6 +1,9 @@
 language: ruby
 gemfile:
-   - test/support/Gemfile
+  - gemfiles/travis.gemfile
 rvm:
-  - 1.9.3
-script: bundle exec rake foodcritic
+  - "1.9.3"
+script: bundle exec rake test:syntax test:lint test:spec
+notifications:
+  email:
+    - mstratton@10thmagnitude.com

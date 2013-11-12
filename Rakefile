@@ -17,6 +17,7 @@
 #
 
 require 'chef/cookbook/metadata'
+#require metadata.rb
 require 'rake/clean'
 require 'rspec/core/rake_task'
 
