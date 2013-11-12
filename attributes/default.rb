@@ -17,3 +17,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+
+default[:xm_demo][:administrator] = "xmadmin"
+default[:xm_demo][:admin_password] = node[:windows_users][:admin_password]
+default[:xm_demo][:apppool_user] = "xm-demo-pool"
+default[:xm_demo][:apppool_password] = node[:windows_users][:apppool_password]
+default[:xm_demo][:web_root] = "c:/webroot/xm-demo"

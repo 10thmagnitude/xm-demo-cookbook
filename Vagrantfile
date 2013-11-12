@@ -54,9 +54,13 @@ config.vm.boot_timeout = 120
 
 
   config.vm.provision :chef_solo do |chef|
-    chef.json = {
+     chef.json = {
+        :windows_users => {
+          :admin_password => 'rootpass',
+          :apppool_password => 'poolpass'
 
-    }
+        }
+      }
 
     chef.run_list = [
       "recipe[xm-demo-cookbook::baseos]",

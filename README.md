@@ -36,8 +36,21 @@ Makes heavy use of Berkshelf. Which is a good thing. You should definitely be us
 # Usage
 
 # Attributes
+## administrator
+## admin_password
+## apppool_user
+## apppool_password
+## web_root
 
 # Recipes
+## baseos
+This is the base operating system.
+
+## msmq
+Installs and configurations MSMQ
+
+## webserver
+All IIS related items including setup of app pools, etc
 
 # Author
 
