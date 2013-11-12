@@ -3,7 +3,7 @@ require 'spec_helper'
 
 describe 'xm-demo-cookbook::webserver' do
   let (:chef_run) do
-    runner = ChefSpec::ChefRunner.new(
+    runner = ChefSpec::Runner.new(
       'platform' => 'windows',
       'version' => '2008R2'
       )
