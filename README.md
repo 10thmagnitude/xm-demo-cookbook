@@ -3,7 +3,7 @@
 
 # xm-demo-cookbook cookbook
 
-This cookbook is used in the POC for configuring a sample application server for Grosvenor. The features of this cookbook are as follows:
+This cookbook is used in the POC for configuring a sample application server for a .NET web application. The features of this cookbook are as follows:
 
 * Install Windows Roles and Features:
 	* File Services
