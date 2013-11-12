@@ -8,9 +8,10 @@ describe 'xm-demo-cookbook::webserver' do
       'version' => '2008R2'
       )
     runner.converge('xm-demo-cookbook::webserver')
-end
+  end
 
-it 'should start a service called W3SVC' do
-  expect(chef_run).to start_service('W3SVC')
-  expect(chef_run).to set_service_to_start_on_boot('W3SVC')
+  it 'should start a service called W3SVC' do
+    expect(chef_run).to start_service('W3SVC')
+    expect(chef_run).to set_service_to_start_on_boot('W3SVC')
+  end
 end
