@@ -1,10 +1,11 @@
 require File.expand_path('../support/helpers', __FILE__)
 include Helpers::Xm_demo_cookbook
 
-describe 'xm-demo-cookbook::default' do
-  
-  it "doesn't do anything yet" do
-    #put a test in here
-  end
+class DomainJoinTest < MiniTest::Unit::TestCase 
 
+  def domainJoined
+      computer = WMI::Win32_ComputerSystem.find(:first)
+      domainName = computer.Domain
+      assert_equal "XM-AD", domainName
+  end
 end

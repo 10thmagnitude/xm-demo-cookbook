@@ -18,9 +18,6 @@ describe_recipe 'xm-demo-cookbook::webserver' do
   it "runs as node[:xm_demo][:apppool_user]" do
     #check for node[:xm_demo][:apppool_user] as app pool user
   end
-  
-  it ''
-    
 
 end
 

@@ -33,8 +33,13 @@ include_recipe "ms_dotnet45"
 
 # Create the webroot and the log root
 
-directory node[:xm_demo][:web_root]
-directory node[:xm_demo][:log_root]
+directory node[:xm_demo][:web_root] do
+  recursive true
+end
+
+directory node[:xm_demo][:log_root] do
+  recursive true
+end
 
 # Reboot handler. Lets us reboot when we need to.
 
