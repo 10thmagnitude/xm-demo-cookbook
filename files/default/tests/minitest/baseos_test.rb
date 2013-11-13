@@ -1,13 +1,9 @@
 require File.expand_path('../support/helpers', __FILE__)
+include Helpers::Xm_demo_cookbook
 
 
-
-describe 'xm-demo-cookbook::baseos' do
+describe_recipe 'xm-demo-cookbook::webserver' do
   
-  include Helpers::Xm_demo_cookbook
-  
-  
-
   describe 'users and groups' do
     it "makes sure vagrant is an admin" do
       group("Administrators").must_include('vagrant')  

@@ -27,6 +27,10 @@
   end
 end
 
+# Install framework 4.5
+
+include_recipe "ms_dotnet45"
+
 # Reboot handler. Lets us reboot when we need to.
 
 windows_reboot 15 do

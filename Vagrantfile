@@ -63,6 +63,7 @@ config.vm.boot_timeout = 120
       }
 
     chef.run_list = [
+      "recipe[xm-demo-cookbook]",
       "recipe[xm-demo-cookbook::baseos]",
       "recipe[xm-demo-cookbook::msmq]",
       "recipe[xm-demo-cookbook::webserver]",
