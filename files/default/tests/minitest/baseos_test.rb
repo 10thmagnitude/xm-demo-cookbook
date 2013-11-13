@@ -24,15 +24,23 @@ describe_recipe 'xm-demo-cookbook::baseos' do
       # something to check the domain status of the machine
     end
   end
+end
   
-  class DomainJoinTest < MiniTest::Unit::TestCase 
+class DomainJoinTest < MiniTest::Unit::TestCase 
 
-    def domainJoined
-        domainName = WMI::Win32_ComputerSystem.Domain
-        assert_equal "XM-AD", domainName
-    end
+  def domainJoined
+      computer = WMI::Win32_ComputerSystem.find(:first)
+      domainName = computer.Domain
+      assert_equal "XM-AD", domainName
+     # computer = WMI::Win32_ComputerSystem.find(:all)
+
+      #computer.each do |computer|
+       #computer.properties_.each do |p|
+        #  puts "#{p.name}: #{computer[p.name]}"
+        #end
+      #end
+      
   end
-
 end
 
 # domain check fun
@@ -41,3 +49,7 @@ end
 # So in theory, the Win32_ComputerSystem.Domain propery is what we want
 # in Ruby, this looks like
 # domain = WMI::Win32_ComputerSystem.Domain
+
+#WMI::Win32_ComputerSystem.find(:first)
+
+
