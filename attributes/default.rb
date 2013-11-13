@@ -2,8 +2,7 @@
 # Cookbook Name:: xm-demo-cookbook
 # Attributes:: default
 #
-# Copyright 2012-2013, SecondMarket Labs, LLC
-# Copyright 2013, Opscode, Inc.
+# Copyright (C) 2013 10th Magnitude
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -23,3 +22,4 @@ default[:xm_demo][:admin_password] = node[:windows_users][:admin_password]
 default[:xm_demo][:apppool_user] = "xm-demo-pool"
 default[:xm_demo][:apppool_password] = node[:windows_users][:apppool_password]
 default[:xm_demo][:web_root] = "c:/webroot/xm-demo"
+default[:xm_demo][:log_root] = "c:/logs"
