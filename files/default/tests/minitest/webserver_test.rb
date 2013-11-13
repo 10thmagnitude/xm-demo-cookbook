@@ -13,6 +13,7 @@ describe_recipe 'xm-demo-cookbook::webserver' do
   
   it 'creates the log directory' do
     directory(node[:xm_demo][:log_root]).must_exist
+  end
     
 
 end
