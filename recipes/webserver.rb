@@ -41,6 +41,30 @@ directory node[:xm_demo][:log_root] do
   recursive true
 end
 
+# stop and delete the default site
+iis_site 'Default Web Site' do
+  action [:stop, :delete]
+end
+
+#creates a new app pool
+iis_pool 'XM-Demo' do
+    runtime_version "4.0"
+    pipeline_mode :Integrated
+    pool_username node[:xm_demo][:apppool_user]
+    pool_password node[:xm_demo][:apppool_password]
+    action :add
+end
+
+# create and start a new site that maps to
+# the physical location specified in the webroot
+iis_site 'XM-Demo' do
+  protocol :http
+  port 80
+  path node[:xm_demo][:web_root]
+  application_pool 'XM-Demo'
+  action [:add,:start]
+end
+
 # Reboot handler. Lets us reboot when we need to.
 
 windows_reboot 15 do

@@ -23,3 +23,4 @@ default[:xm_demo][:apppool_user] = "xm-demo-pool"
 default[:xm_demo][:apppool_password] = node[:windows_users][:apppool_password]
 default[:xm_demo][:web_root] = "c:/webroot/xm-demo"
 default[:xm_demo][:log_root] = "c:/logs"
+default[:iis][:accept_eula] = true
