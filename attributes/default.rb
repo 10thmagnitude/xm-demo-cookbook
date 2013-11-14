@@ -18,9 +18,12 @@
 #
 
 default[:xm_demo][:administrator] = "xmadmin"
-default[:xm_demo][:admin_password] = node[:windows_users][:admin_password]
+#Hardcoding for now TODO move to databag
+default[:xm_demo][:admin_password] = "Admin123"
+#default[:xm_demo][:admin_password] = node[:windows_users][:admin_password]
 default[:xm_demo][:apppool_user] = "xm-demo-pool"
-default[:xm_demo][:apppool_password] = node[:windows_users][:apppool_password]
+#default[:xm_demo][:apppool_password] = node[:windows_users][:apppool_password]
+default[:xm_demo][:apppool_password] = "PoolAdmin123"
 default[:xm_demo][:web_root] = "c:/webroot/xm-demo"
 default[:xm_demo][:log_root] = "c:/logs"
 default[:iis][:accept_eula] = true
