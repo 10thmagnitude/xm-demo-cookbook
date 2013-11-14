@@ -15,4 +15,14 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-#
+# 
+# /s means silent
+# /q means silent extraction
+
+# install FEP as custom installer and manually set the silent install flags
+windows_package "Microsoft Forefront Endpoint Protection" do
+  source "https://dl.dropboxusercontent.com/u/2105139/FEPInstall.exe"
+  options "/s /q"
+  installer_type :custom
+  action :install
+end

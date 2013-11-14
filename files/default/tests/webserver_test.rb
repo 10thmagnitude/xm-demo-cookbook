@@ -29,8 +29,7 @@ describe_recipe 'xm-demo-cookbook::webserver' do
     describe '.NET Framework Tests' do
   
     it 'checks for framework 3.5.1' do
-      framework351Version = Registry.get_value("HKLM\\SOFTWARE\\Microsoft\\NET Framework Setup\\NDP\\v3.5","SP")
-      framework351Version.must_equal 1
+      Registry.get_value("HKLM\\SOFTWARE\\Microsoft\\NET Framework Setup\\NDP\\v3.5","SP").must_equal 1
     end
   
     it 'checks for framework 4.5' do
