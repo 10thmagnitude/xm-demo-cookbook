@@ -1,7 +1,7 @@
-require File.expand_path('../support/helpers', __FILE__)
+require File.expand_path('../helpers.rb', __FILE__)
 include Helpers::Xm_demo_cookbook
 
-class DomainJoinTest < MiniTest::Unit::TestCase 
+class DomainJoinTest < MiniTest::Chef::TestCase
 
   def domainJoined
       computer = WMI::Win32_ComputerSystem.find(:first)

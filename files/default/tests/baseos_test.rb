@@ -1,4 +1,4 @@
-require File.expand_path('../support/helpers', __FILE__)
+require File.expand_path('../helpers.rb', __FILE__)
 include Helpers::Xm_demo_cookbook
 
 
@@ -21,9 +21,11 @@ describe_recipe 'xm-demo-cookbook::baseos' do
   
   describe 'configuration' do
     it 'joins the domain' do
-      # something to check the domain status of the machine
+      computer = WMI::Win32_ComputerSystem.find(:first)
+      domainName = computer.Domain
+      domainName.must_equal "XM-AD"
     end
   end
 end
 
-
+#DHL express 800-225-5345 tracking number 599-445-7755
