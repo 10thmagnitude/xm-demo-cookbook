@@ -13,4 +13,3 @@ depends "minitest-handler", "~> 1.1.2"
 depends "ms_dotnet45"
 depends "iis", "~> 1.5.4"
 
-
