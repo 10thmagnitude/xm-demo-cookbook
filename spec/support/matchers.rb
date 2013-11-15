@@ -1,3 +1,3 @@
-#def my_custom_matcher(feature)
-#  ChefSpec::Matchers::ResourceMatcher.new(:feature, :install, resource_name)
-#end
+def install_feature_feature_name (feature_name)
+  ChefSpec::Matchers::ResourceMatcher.new(:feature_feature_name, :install, feauture)
+dend

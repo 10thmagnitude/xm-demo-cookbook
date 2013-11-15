@@ -11,8 +11,8 @@ describe 'xm-demo-cookbook::webserver' do
   end
 
   it 'should install the IIS role' do
-    expect(chef_run).to include_recipe('windows::default')
-    #expect(chef_run).to install_windows_feature('IIS-WebServerRole')
+    #expect(chef_run).to include_recipe('windows::default')
+    expect(chef_run).to install_feature('IIS-WebServerRole')
   end
   
 end
