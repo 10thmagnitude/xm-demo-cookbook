@@ -1,6 +1,8 @@
 require 'chef/config'
 require 'spec_helper'
 
+expect(chef_run).to include_recipe('windows::default')
+
 describe 'xm-demo-cookbook::webserver' do
   let (:chef_run) do
     runner = ChefSpec::Runner.new(
@@ -10,8 +12,7 @@ describe 'xm-demo-cookbook::webserver' do
     runner.converge('xm-demo-cookbook::webserver')
   end
 
-#  it 'should start a service called W3SVC' do
-#    expect(chef_run).to start_service('W3SVC')
-#    expect(chef_run).to set_service_to_start_on_boot('W3SVC')
-#  end
+  it 'should install the IIS role' do
+    expect(chef_run).to install_feature('IIS-WebServerRole')
+  end
 end
