@@ -1,4 +1,4 @@
-[![Build Status](https://secure.travis-ci.org/10thmagnitude/xm-demo-cookbook.png)](http://travis-ci.org/mattstratton/xm-demo-cookbook)
+[![Build Status](https://secure.travis-ci.org/10thmagnitude/xm-demo-cookbook.png)](http://travis-ci.org/10thmagnitude/xm-demo-cookbook)
 
 
 # xm-demo-cookbook cookbook
