@@ -1,5 +1,5 @@
 [![Build Status](https://secure.travis-ci.org/10thmagnitude/xm-demo-cookbook.png)](http://travis-ci.org/10thmagnitude/xm-demo-cookbook)
-
+[![Dependency Status](https://gemnasium.com/10thmagnitude/xm-demo-cookbook.png)][gemnasium]
 
 # xm-demo-cookbook cookbook
 
