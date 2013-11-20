@@ -43,6 +43,8 @@ Makes heavy use of Berkshelf. Which is a good thing. You should definitely be us
 
 ## Usage
 
+```knife azure server create --azure-dns-name 'vmname'```
+
 ## Attributes
 ### administrator
 ### admin_password
@@ -59,6 +61,8 @@ Installs and configurations MSMQ
 
 ### webserver
 All IIS related items including setup of app pools, etc
+
+
 
 ## Author
 
