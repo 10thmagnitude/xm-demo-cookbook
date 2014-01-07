@@ -1,19 +1,16 @@
 ---
-driver:
-  name: vagrant
-
-provisioner:
-  name: chef_solo
+driver_plugin: vagrant
+driver_config:
+  require_chef_omnibus: true
 
 platforms:
-  - name: ubuntu-12.04
-  driver_config:
-  	box: win2k8r2
-  	box_url: https://dl.dropboxusercontent.com/u/2105139/vagrant/win2k8r2.box
-
+  - name: win2k8r2
+    driver_config:
+    box: win2k8r2
+    box_url: https://dl.dropboxusercontent.com/u/2105139/vagrant/win2k8r2.box
 
 suites:
   - name: default
     run_list:
       - recipe[xm-demo-cookbook::default]
-    attributes:
+    attributes: {}
