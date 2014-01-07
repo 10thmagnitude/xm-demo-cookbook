@@ -4,3 +4,4 @@ gem 'berkshelf'
 gem 'thor-foodcritic'
 gem 'minitest-chef-handler'
 gem "test-kitchen"
+gem 'kitchen-vagrant'
