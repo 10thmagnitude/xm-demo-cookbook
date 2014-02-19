@@ -7,3 +7,4 @@ script: bundle exec rake test:syntax test:lint test:spec
 notifications:
   email:
     - mstratton@10thmagnitude.com
+  flowdock: 2f4198d4eb466f6dd0b837cf3b901d03

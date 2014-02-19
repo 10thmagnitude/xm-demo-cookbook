@@ -11,6 +11,7 @@ Vagrant.configure("2") do |config|
   # Every Vagrant virtual environment requires a box to build off of.
   config.vm.box = "vagrant-win2k8r2"
   config.vm.guest = :windows
+  config.omnibus.chef_version = :latest
 
   # The url from where the 'config.vm.box' box will be fetched if it
   # doesn't already exist on the user's system.
