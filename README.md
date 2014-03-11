@@ -66,4 +66,4 @@ All IIS related items including setup of app pools, etc
 
 ## Author
 
-Author:: Matt Stratton (<mstratton@10thmagnitude.com>)
+Author:: Matt Stratton (<mstratton@10thmagnitude.com>) 
