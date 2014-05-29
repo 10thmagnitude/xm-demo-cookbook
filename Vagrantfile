@@ -13,6 +13,8 @@ Vagrant.configure("2") do |config|
   config.vm.guest = :windows
   config.omnibus.chef_version = :latest
 
+  config.vm.communicator = "winrm"
+
   # The url from where the 'config.vm.box' box will be fetched if it
   # doesn't already exist on the user's system.
   config.vm.box_url = "https://dl.dropboxusercontent.com/u/2105139/vagrant/win2k8r2.box"
