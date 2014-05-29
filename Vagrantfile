@@ -45,7 +45,7 @@ end
 
 # vbox specifics
 config.vm.provider "virtualbox" do |v|
-#  v.gui = true
+  v.gui = true
 end
 config.vm.boot_timeout = 120
 
